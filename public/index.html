@@ -10,7 +10,7 @@
     <!-- app bar -->
     <div
       class="flex md:hidden items-center justify-between mt-10 bg-red-100 mb-6"
-    >
+     >
       <div class="">Digitize</div>
       <div class="text-lg font-bold text-blue-950">Digitize</div>
       <div
@@ -69,118 +69,184 @@
         <span class="text-sm text-blue-950 font-thin">Filter: Apple</span>
       </div>
     </div>
-    <!-- product section -->
-    <div x-data = "{
-        products : [
-        {id:1, title:'Smart watch series 3' , price:'£ 280.00'},
-        {id:2, title:'Smart watch series 4' , price:'£ 280.00'},
-        {id:3, title:'Smart watch series 5' , price:'£ 280.00'},
-        {id:4, title:'Smart watch series 6' , price:'£ 280.00'},
-        {id:5, title:'Smart watch series 7' , price:'£ 280.00'},
-        {id:6, title:'Smart watch series 8' , price:'£ 280.00'},
-        {id:7, title:'Smart watch series 7 pro' , price:'£ 280.00'},
-        {id:8, title:'Smart watch series 6 pro' , price:'£ 280.00'},
-        {id:9, title:'Smart watch series 5 pro' , price:'£ 280.00'},
-        {id:10, title:'Smart watch series 8 pro' , price:'£ 280.00'},
-        ]
-      }" class="grid gap-x-2 gap-y-8 sm:gap-x-4 md:gap-x-8 md:gap-y-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <!-- single product -->
-      <template x-for="product in products" :key="product.id">
-      <div class="bg-white rounded-xl shadow-lg p-3 text-sm">
-        <div
-          class="mb-3 flex items-center justify-center bg-gray-100 rounded-xl p-6"
-        >
-          <img class="" src="../assets/img/watch1.png" alt="" srcset="" />
+    <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-6">
+      <!-- sidebar -->
+      <div class="hidden md:block col-span-3 lg:col-span-3 row-span-2">
+        <div class="bg-white p-4 rounded-xl grid ml-3 font- gap-3">
+          <div class="mt-4 text-orange-600 font-bold text-xl">Group</div>
+          <li class="flex">
+            <a href="#" class="flex gap-2 text-gray-400 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>Smart Phone</a>  
+          </li>
+          <li class="flex">
+            <a href="#" class="flex gap-2 text-gray-400 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>Laptop</a>  
+          </li>
+          <li class="flex">
+            <a href="#" class="flex gap-2 text-gray-400 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>Smart Watch</a>  
+          </li>
+          <div class="text-orange-600 font-bold text-xl cursor-pointer">Filter</div>
+          <div class="flex gap-2 font-bold items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+          </svg>
+          <span>Company</span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg></div>
+          <div class="cursor-pointer"><input class="mr-2 " type="checkbox">Apple</div>
+          <div class="cursor-pointer"><input class="mr-2 " type="checkbox">Samsung</div>
+          <div class="cursor-pointer"><input class="mr-2 " type="checkbox">Xiaomi</div>
+          <div class="cursor-pointer"><input class="mr-2 " type="checkbox">Huawei</div>
+          <div class="flex gap-2 font-bold cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>Product color<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg></div>
+          <div class="flex gap-2 font-bold cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+          </svg>Price Range<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg></div>
+  
         </div>
-        <div class="flex items-center justify-between my-2">
-          <div class="text-gray-300 flex items-center md:text-xl">Apple</div>
-          <div x-data="{color: 'red'}" class="flex items-center cursor-pointer">
-            <span
-              @click="color = 'purple'"
-              class="flex w-4 h-4 border ring-2 ring-white bg-purple-500 rounded-full items-center justify-center hover:scale-125"
-            >
-              <svg
-                x-show="color==='purple'"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3 text-white font-bold"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            <span
-              @click="color = 'yellow'"
-              class="flex w-4 h-4 border ring-2 ring-white bg-yellow-300 rounded-full items-center justify-center hover:scale-125"
-            >
-              <svg
-                x-show="color==='yellow'"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3 text-white font-bold"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            <span
-              @click="color = 'red'"
-              class="flex w-4 h-4 border ring-2 ring-white bg-red-400 rounded-full items-center justify-center hover:scale-125"
-            >
-              <svg
-                x-show="color==='red'"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3 text-white font-bold"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            <span
-              @click="color = 'blue'"
-              class="flex w-4 h-4 border ring-2 ring-white bg-blue-900 rounded-full items-center justify-center hover:scale-125"
-            >
-              <svg
-                x-show="color==='blue'"
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3 text-white font-bold"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-        <span x-text="product.title" class="flex text-xs font-bold mx-2 md:text-base justify-start"
-          ></span
-        >
-        <span x-text="product.price" class="flex text-xs justify-end text-red-500 font-bold"
-          ></span
-        >
-        <hr class="my-2" />
-        <button class="w-full text-orange-500 font-bold py-1 md:text-xl">
-          Go to basket
-        </button>
       </div>
-    </template>
+      <!-- sort section -->
+      <div class="rounded-xl hidden md:block col-span-8 lg:col-span-9">
+        <div x-data="{sort : 1, activeClass: 'text-slate-800 font-bold'}" class="bg-white p-x-4  flex items-center gap-x-6 text-gray-400 rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10 font-thin rounded bg-orange-200 text-orange-600 p-1 ml-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            >
+            <path
+              d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+            />
+          </svg>
+          <button @click="sort = 1 " :class="sort === 1 ? activeClass : ''" class="py-4 relative" ><span>Popular</span><span x-show="sort === 1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"></span></button>
+          <button @click="sort = 2 " :class="sort === 2 ? activeClass : ''" class="py-4 relative" ><span>Cheapest</span><span x-show="sort === 2" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"></span></button>
+          <button @click="sort = 3 " :class="sort === 3 ? activeClass : ''" class="py-4 relative" ><span>Most expensive</span><span x-show="sort === 3" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"></span></button>
+          <button @click="sort = 4 " :class="sort === 4 ? activeClass : ''" class="py-4 relative" ><span>Bestselling</span><span x-show="sort === 4" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"></span></button>
+        </div>
+      </div>
+      <!-- product section -->
+      <div class=" rounded-xl col-span-12 md:col-span-8 lg:col-span-9 ">
+        <div x-data = "{
+          products : [
+          {id:1, title:'Smart watch series 3' , price:'£ 280.00'},
+          {id:2, title:'Smart watch series 4' , price:'£ 280.00'},
+          {id:3, title:'Smart watch series 5' , price:'£ 280.00'},
+          {id:4, title:'Smart watch series 6' , price:'£ 280.00'},
+          {id:5, title:'Smart watch series 7' , price:'£ 280.00'},
+          {id:6, title:'Smart watch series 8' , price:'£ 280.00'},
+          {id:7, title:'Smart watch series 7 pro' , price:'£ 280.00'},
+          {id:8, title:'Smart watch series 6 pro' , price:'£ 280.00'},
+          {id:9, title:'Smart watch series 5 pro' , price:'£ 280.00'},
+          {id:10, title:'Smart watch series 8 pro' , price:'£ 280.00'},
+          ]
+        }" class="grid gap-x-2 gap-y-8 sm:gap-x-4 md:gap-x-8 md:gap-y-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <!-- single product -->
+        <template x-for="product in products" :key="product.id">
+        <div class="bg-white rounded-xl shadow-lg p-3 text-sm">
+          <div
+            class="mb-3 flex items-center justify-center bg-gray-100 rounded-xl p-6"
+          >
+            <img class="" src="../assets/img/watch1.png" alt="" srcset="" />
+          </div>
+          <div class="flex items-center justify-between my-2">
+            <div class="text-gray-300 flex items-center md:text-xl">Apple</div>
+            <div x-data="{color: 'red'}" class="flex items-center cursor-pointer">
+              <span
+                @click="color = 'purple'"
+                class="flex w-4 h-4 border ring-2 ring-white bg-purple-500 rounded-full items-center justify-center hover:scale-125"
+              >
+                <svg
+                  x-show="color==='purple'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3 text-white font-bold"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span
+                @click="color = 'yellow'"
+                class="flex w-4 h-4 border ring-2 ring-white bg-yellow-300 rounded-full items-center justify-center hover:scale-125"
+              >
+                <svg
+                  x-show="color==='yellow'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3 text-white font-bold"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span
+                @click="color = 'red'"
+                class="flex w-4 h-4 border ring-2 ring-white bg-red-400 rounded-full items-center justify-center hover:scale-125"
+              >
+                <svg
+                  x-show="color==='red'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3 text-white font-bold"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span
+                @click="color = 'blue'"
+                class="flex w-4 h-4 border ring-2 ring-white bg-blue-900 rounded-full items-center justify-center hover:scale-125"
+              >
+                <svg
+                  x-show="color==='blue'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-3 w-3 text-white font-bold"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <span x-text="product.title" class="flex text-xs font-bold mx-2 md:text-base justify-start"
+            ></span
+          >
+          <span x-text="product.price" class="flex text-xs justify-end text-red-500 font-bold md:text-base"
+            ></span
+          >
+          <hr class="my-2" />
+          <button class="w-full text-orange-500 font-bold py-1 md:text-base">
+            Go to basket
+          </button>
+        </div>
+        </template>
+      </div>  
+      </div>
     </div>
 
     <script
