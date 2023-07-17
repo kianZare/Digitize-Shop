@@ -151,8 +151,11 @@
     >
       <!-- sidebar -->
       <div
-        class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2">
-        <div class="bg-white p-4 rounded-xl grid ml-3 font- gap-3 max-h-[calc(100vh_-_90px)] overflow-auto sticky top-20">
+        class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2"
+      >
+        <div
+          class="bg-white p-4 rounded-xl grid ml-3 font- gap-3 max-h-[calc(100vh_-_90px)] overflow-auto sticky top-20"
+        >
           <div class="mt-4 text-orange-600 font-bold text-xl">Group</div>
           <li class="flex">
             <a href="#" class="flex gap-2 text-gray-400 cursor-pointer"
@@ -465,73 +468,74 @@
       </div>
 
       <!-- content -->
-        <!-- sort section -->
+      <!-- sort section -->
+      <div
+        class="rounded-xl hidden md:block col-span-8 lg:col-span-9 xl:col-span-10 max-w-4xl"
+      >
         <div
-          class="rounded-xl hidden md:block col-span-8 lg:col-span-9 xl:col-span-10 max-w-4xl">
-          <div
-            x-data="{sort : 1, activeClass: 'text-slate-800 font-bold'}"
-            class="bg-white p-x-4 flex items-center gap-x-6 text-gray-400 rounded-lg"
+          x-data="{sort : 1, activeClass: 'text-slate-800 font-bold'}"
+          class="bg-white p-x-4 flex items-center gap-x-6 text-gray-400 rounded-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 font-thin rounded bg-orange-200 text-orange-600 p-1 ml-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8 font-thin rounded bg-orange-200 text-orange-600 p-1 ml-2"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
-              />
-            </svg>
-            <button
-              @click="sort = 1 "
-              :class="sort === 1 ? activeClass : ''"
-              class="py-4 relative"
-            >
-              <span>Popular</span
-              ><span
-                x-show="sort === 1"
-                class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
-              ></span>
-            </button>
-            <button
-              @click="sort = 2 "
-              :class="sort === 2 ? activeClass : ''"
-              class="py-4 relative"
-            >
-              <span>Cheapest</span
-              ><span
-                x-show="sort === 2"
-                class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
-              ></span>
-            </button>
-            <button
-              @click="sort = 3 "
-              :class="sort === 3 ? activeClass : ''"
-              class="py-4 relative"
-            >
-              <span>Most expensive</span
-              ><span
-                x-show="sort === 3"
-                class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
-              ></span>
-            </button>
-            <button
-              @click="sort = 4 "
-              :class="sort === 4 ? activeClass : ''"
-              class="py-4 relative"
-            >
-              <span>Bestselling</span
-              ><span
-                x-show="sort === 4"
-                class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
-              ></span>
-            </button>
-          </div>
+            <path
+              d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+            />
+          </svg>
+          <button
+            @click="sort = 1 "
+            :class="sort === 1 ? activeClass : ''"
+            class="py-4 relative"
+          >
+            <span>Popular</span
+            ><span
+              x-show="sort === 1"
+              class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
+            ></span>
+          </button>
+          <button
+            @click="sort = 2 "
+            :class="sort === 2 ? activeClass : ''"
+            class="py-4 relative"
+          >
+            <span>Cheapest</span
+            ><span
+              x-show="sort === 2"
+              class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
+            ></span>
+          </button>
+          <button
+            @click="sort = 3 "
+            :class="sort === 3 ? activeClass : ''"
+            class="py-4 relative"
+          >
+            <span>Most expensive</span
+            ><span
+              x-show="sort === 3"
+              class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
+            ></span>
+          </button>
+          <button
+            @click="sort = 4 "
+            :class="sort === 4 ? activeClass : ''"
+            class="py-4 relative"
+          >
+            <span>Bestselling</span
+            ><span
+              x-show="sort === 4"
+              class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 right-0"
+            ></span>
+          </button>
         </div>
-        <!-- product section -->
-        <div class="max-w-4xl rounded-xl col-span-12 md:col-span-8 lg:col-span-9">
-          <div
-            x-data="{
+      </div>
+      <!-- product section -->
+      <div class="max-w-4xl rounded-xl col-span-12 md:col-span-8 lg:col-span-9">
+        <div
+          x-data="{
           products : [
           {id:1, title:'Smart watch series 3' , price:'£ 280.00'},
           {id:2, title:'Smart watch series 4' , price:'£ 280.00'},
@@ -545,126 +549,157 @@
           {id:10, title:'Smart watch series 8 pro' , price:'£ 280.00'},
           ]
           }"
-            class="grid gap-x-2 gap-y-8 sm:gap-x-4 md:gap-x-8 md:gap-y-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-          >
-            <!-- single product -->
-            <template x-for="product in products" :key="product.id">
-              <div class="bg-white rounded-xl shadow-lg p-3 text-sm">
-                <div
-                  class="mb-3 flex items-center justify-center bg-gray-100 rounded-xl p-6"
-                >
-                  <img
-                    class=""
-                    src="../assets/img/watch1.png"
-                    alt=""
-                    srcset=""
-                  />
-                </div>
-                <div class="flex items-center justify-between my-2">
-                  <div
-                    class="text-gray-300 flex items-center text-base lg:text-xl"
-                  >
-                    Apple
-                  </div>
-                  <div
-                    x-data="{color: 'red'}"
-                    class="flex items-center cursor-pointer"
-                  >
-                    <span
-                      @click="color = 'purple'"
-                      class="flex w-4 h-4 border ring-2 ring-white bg-purple-500 rounded-full items-center justify-center hover:scale-125"
-                    >
-                      <svg
-                        x-show="color==='purple'"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3 text-white font-bold"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      @click="color = 'yellow'"
-                      class="flex w-4 h-4 border ring-2 ring-white bg-yellow-300 rounded-full items-center justify-center hover:scale-125"
-                    >
-                      <svg
-                        x-show="color==='yellow'"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3 text-white font-bold"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      @click="color = 'red'"
-                      class="flex w-4 h-4 border ring-2 ring-white bg-red-400 rounded-full items-center justify-center hover:scale-125"
-                    >
-                      <svg
-                        x-show="color==='red'"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3 text-white font-bold"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                    <span
-                      @click="color = 'blue'"
-                      class="flex w-4 h-4 border ring-2 ring-white bg-blue-900 rounded-full items-center justify-center hover:scale-125"
-                    >
-                      <svg
-                        x-show="color==='blue'"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-3 w-3 text-white font-bold"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-                <span
-                  x-text="product.title"
-                  class="flex text-xs lg:text-base font-bold mx-2 justify-start"
-                ></span>
-                <span
-                  x-text="product.price"
-                  class="flex text-xs py-3 lg:text-base justify-end text-red-500 font-bold md:text-base"
-                ></span>
-                <hr class="my-2" />
-                <button
-                  class="w-full text-orange-500 font-bold py-1 md:text-base"
-                >
-                  Go to basket
-                </button>
+          class="grid gap-x-2 gap-y-8 sm:gap-x-4 md:gap-x-8 md:gap-y-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        >
+          <!-- single product -->
+          <template x-for="product in products" :key="product.id">
+            <div class="bg-white rounded-xl shadow-lg p-3 text-sm">
+              <div
+                class="mb-3 flex items-center justify-center bg-gray-100 rounded-xl p-6"
+              >
+                <img class="" src="../assets/img/watch1.png" alt="" srcset="" />
               </div>
-            </template>
-          </div>
+              <div class="flex items-center justify-between my-2">
+                <div
+                  class="text-gray-300 flex items-center text-base lg:text-xl"
+                >
+                  Apple
+                </div>
+                <div
+                  x-data="{color: 'red'}"
+                  class="flex items-center cursor-pointer"
+                >
+                  <span
+                    @click="color = 'purple'"
+                    class="flex w-4 h-4 border ring-2 ring-white bg-purple-500 rounded-full items-center justify-center hover:scale-125"
+                  >
+                    <svg
+                      x-show="color==='purple'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3 text-white font-bold"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    @click="color = 'yellow'"
+                    class="flex w-4 h-4 border ring-2 ring-white bg-yellow-300 rounded-full items-center justify-center hover:scale-125"
+                  >
+                    <svg
+                      x-show="color==='yellow'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3 text-white font-bold"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    @click="color = 'red'"
+                    class="flex w-4 h-4 border ring-2 ring-white bg-red-400 rounded-full items-center justify-center hover:scale-125"
+                  >
+                    <svg
+                      x-show="color==='red'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3 text-white font-bold"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    @click="color = 'blue'"
+                    class="flex w-4 h-4 border ring-2 ring-white bg-blue-900 rounded-full items-center justify-center hover:scale-125"
+                  >
+                    <svg
+                      x-show="color==='blue'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-3 w-3 text-white font-bold"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <span
+                x-text="product.title"
+                class="flex text-xs lg:text-base font-bold mx-2 justify-start"
+              ></span>
+              <span
+                x-text="product.price"
+                class="flex text-xs py-3 lg:text-base justify-end text-red-500 font-bold md:text-base"
+              ></span>
+              <hr class="my-2" />
+              <button
+                class="w-full text-orange-500 font-bold py-1 md:text-base"
+              >
+                Go to basket
+              </button>
+            </div>
+          </template>
+          <div class="h-10"></div>
         </div>
+      </div>
+    </div>
 
+    <!-- buttom Navigation -->
+    <div class="md:hidden">
+      <div class="fixed bottom-0 left-0 right-0 w-full rounded-t-md bg-white border-t-2">
+        <nav class="w-full">
+          <ul x-data="{activeBottomTab : 1, activeTabClass : 'text-slate-800 font-bold'}" class="flex items-center justify-between px-2 py-1 text-sm font-bold mx-3 text-gray-400">
+            <li @click="activeBottomTab = 1" :class="activeBottomTab === 1 ? activeTabClass : ''" class="flex-auto">
+              <a href="#" class="flex items-center justify-center p-2 ">
+              
+                <span "><svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M26.72 9.094 19.04 3.72c-2.093-1.466-5.307-1.386-7.32.174L5.04 9.107c-1.333 1.04-2.387 3.173-2.387 4.853v9.2c0 3.4 2.76 6.174 6.16 6.174h14.374c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.014-2.627-5.04ZM17 24c0 .547-.453 1-1 1-.547 0-1-.453-1-1v-4c0-.546.453-1 1-1 .547 0 1 .454 1 1v4Z"/></svg></span>
+                <span x-show="activeBottomTab === 1" class="flex p-2 cursor-pointer ">Home</span>
+              </a>
+            </li>
+            <li @click="activeBottomTab = 2" :class="activeBottomTab === 2 ? activeTabClass : ''" class="flex-auto">
+              <a href="#" class="flex items-center justify-center p-2">
+                <span><svg width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g><path d="M10.257 2.833H7.565c-3.102 0-4.732 1.63-4.732 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.692c3.088 0 4.717-1.629 4.717-4.717V7.55c.014-3.088-1.615-4.718-4.703-4.718ZM26.45 2.833h-2.692c-3.089 0-4.718 1.63-4.718 4.718v2.692c0 3.088 1.63 4.717 4.718 4.717h2.691c3.088 0 4.718-1.629 4.718-4.717V7.55c0-3.088-1.63-4.718-4.718-4.718ZM26.45 19.026h-2.692c-3.089 0-4.718 1.629-4.718 4.717v2.692c0 3.088 1.63 4.718 4.718 4.718h2.691c3.088 0 4.718-1.63 4.718-4.718v-2.692c0-3.088-1.63-4.717-4.718-4.717ZM10.257 19.026H7.565c-3.102 0-4.732 1.629-4.732 4.717v2.692c0 3.103 1.63 4.732 4.718 4.732h2.692c3.088 0 4.717-1.63 4.717-4.718v-2.692c.014-3.102-1.615-4.731-4.703-4.731Z"/></g></svg></span>
+                <span x-show="activeBottomTab === 2" class="flex p-2 cursor-pointer ">Group</span>
+              </a>
+            </li>
+            <li @click="activeBottomTab = 3" :class="activeBottomTab === 3 ? activeTabClass : ''" class="flex-auto">
+              <a href="#" class="flex items-center justify-center p-2">
+                <span><svg width="34" height="34" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M28.277 12.693c-.95-1.048-2.38-1.657-4.364-1.87V9.747a6.9 6.9 0 0 0-2.266-5.114c-1.46-1.332-3.358-1.955-5.327-1.771-3.386.326-6.233 3.598-6.233 7.14v.821c-1.984.213-3.415.822-4.364 1.87-1.374 1.53-1.331 3.57-1.176 4.987l.992 7.89c.298 2.763 1.417 5.597 7.508 5.597h7.905c6.092 0 7.211-2.834 7.509-5.582l.992-7.92c.155-1.402.184-3.442-1.176-4.972ZM16.518 4.831c1.417-.128 2.763.312 3.811 1.26a4.925 4.925 0 0 1 1.615 3.656v.991h-9.888v-.736c0-2.522 2.082-4.944 4.462-5.171Zm-4.59 13.798h-.014a1.42 1.42 0 0 1-1.416-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.418 1.416Zm9.917 0h-.014a1.42 1.42 0 0 1-1.417-1.416 1.424 1.424 0 0 1 2.848 0 1.42 1.42 0 0 1-1.417 1.416Z" /></svg></span>
+                <span x-show="activeBottomTab === 3" class="flex p-2 cursor-pointer ">Cart</span>
+              </a>
+            </li>
+            <li @click="activeBottomTab = 4" :class="activeBottomTab === 4 ? activeTabClass : ''" class="flex-auto">
+              <a href="#" class="flex items-center justify-center p-2">
+                <span><svg width="29" height="25" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.834.333a7.702 7.702 0 0 0-6.156 3.09A7.701 7.701 0 0 0 8.522.332C4.278.333.833 3.8.833 8.067c0 1.644.267 3.178.712 4.578 2.177 6.91 8.933 11.066 12.266 12.2.467.155 1.245.155 1.711 0 3.334-1.134 10.09-5.267 12.267-12.2.467-1.423.711-2.934.711-4.578C28.522 3.8 25.078.333 20.834.333Z"/></svg></span>
+                <span x-show="activeBottomTab === 4" class="flex p-2 cursor-pointer ">Favourite</span>
+              </a>
+            </li>
+  
+          </ul>
+        </nav>
       </div>
 
+    </div>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
