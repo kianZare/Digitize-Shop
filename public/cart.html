@@ -6,7 +6,7 @@
     <title>Cart page</title>
     <link rel="stylesheet" href="./build/tailwind.css" />
   </head>
-  <body class="bg-stone-100 px-4">
+  <body class="bg-stone-100 px-4 text-center">
     <!-- app bar -->
     <div class="flex md:hidden items-center justify-between mt-6 mb-6">
       <div class="bg-white rounded p-1">
@@ -50,485 +50,203 @@
       </div>
     </div>
 
-        <!-- descktop navBar -->
-        <div class="hidden md:block shadow-lg sticky z-10 top-0">
-          <div class="flex items-center justify-between bg-white mb-2 sticky">
-            <div class="flex w-full">
-              <ul
-                class="flex items-center gap-3 lg:gap-8 p-5 text-sm lg:text-base xl:text-lg font-bold"
-              >
-                <li class="text-xl lg:text-2xl">
-                  <span class="text-orange-600">Digi</span><span>Tize</span>
-                </li>
-                <li class="flex cursor-pointer"><a href="../public/watch.html">Home</a></li>
-                <li class="flex cursor-pointer"><a href="../public/iphone.html">SmartPhone</a></li>
-                <li class="flex cursor-pointer"><a href="../public/laptop.html">Laptop</a></li>
-                <li class="flex cursor-pointer"><a href="../public/watch.html">SmartWatch</a></li>
-              </ul>
-            </div>
-            <!-- search -->
-            <label
-              class="relative flex w-full max-w-2xl border-none ml-10 mr-5 focus:outline-none"
-            >
-              <span class="absolute left-0 flex items-center pl-2 rounded"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-10 h-10 p-2 rounded text-stone-600 bg-stone-100"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                  />
-                </svg>
-              </span>
-              <input
-                type="search"
-                class="bg-stone-100 flex rounded p-2 w-full ml-10 mr-5 focus:outline-none"
-                placeholder="Search Product name,Brand name, Model name and..."
-              />
-            </label>
-          </div>
-        </div>
-        <!-- filter & sort section -->
-        <div class="flex md:hidden items-center justify-between gap-4 mb-5">
-          <div class="bg-white w-1/2 flex items-center justify-start rounded p-2">
-            <div class="flex mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 font-thin text-orange-600"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  d="M3 3a1 1 0 000 2h11a1 1 0 100-2H3zM3 7a1 1 0 000 2h7a1 1 0 100-2H3zM3 11a1 1 0 100 2h4a1 1 0 100-2H3zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
-                />
-              </svg>
-            </div>
-            <span class="text-sm text-slate-800 font-thin">Popular</span>
-          </div>
-          <div class="bg-white w-1/2 flex items-center justify-start rounded p-2">
-            <div class="flex mr-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6 text-gray-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                />
-              </svg>
-            </div>
-            <span class="text-sm text-slate-800 font-thin">Filter: Apple</span>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-12 md:grid-rows-[55px_minmax(500px,_1fr)] md:gap-6">
-          <!-- sidebar -->
-          <div class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2">
-            <div class="bg-white p-4 rounded-xl grid ml-3 font- gap-3 max-h-[calc(100vh_-_90px)] overflow-auto sticky top-20">
-              <div class="mt-4 text-orange-600 font-bold text-xl">Group</div>
-              <li class="flex">
-                <a href="../public/iphone.html" class="flex gap-2 text-gray-400 cursor-pointer"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
+    <!-- Descktop -->
+          <!-- descktop navBar -->
+          <div class="flex items-center justify-center shadow-lg sticky z-10 top-0">
+              <div class="hidden md:block w-full max-w-6xl ">
+                <div class="flex items-center justify-center bg-white mb-2">
+                  <div class="flex w-full items-center justify-center">
+                    <ul
+                      class="flex items-center gap-3 lg:gap-8 p-5 text-sm lg:text-base xl:text-lg font-bold"
+                    >
+                      <li class="text-xl lg:text-2xl">
+                        <span class="text-orange-600">Digi</span><span>Tize</span>
+                      </li>
+                      <li class="flex cursor-pointer"><a href="../public/watch.html">Home</a></li>
+                      <li class="flex cursor-pointer"><a href="../public/iphone.html">SmartPhone</a></li>
+                      <li class="flex cursor-pointer"><a href="../public/laptop.html">Laptop</a></li>
+                      <li class="flex cursor-pointer"><a href="../public/watch.html">SmartWatch</a></li>
+                    </ul>
+                  </div>
+                  <!-- search -->
+                  <label
+                    class="relative flex w-full max-w-2xl border-none ml-10 mr-5 focus:outline-none"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                    /></svg
-                  >Smart Phone</a
-                >
-              </li>
-              <li class="flex">
-                <a href="../public/laptop.html" class="flex gap-2 text-gray-400 cursor-pointer"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    /></svg
-                  >Laptop</a
-                >
-              </li>
-              <li class="flex">
-                <a href="../public/watch.html" class="flex gap-2 text-gray-400 cursor-pointer"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    /></svg
-                  >Smart Watch</a
-                >
-              </li>
-              <div class="text-orange-600 font-bold text-xl cursor-pointer">
-                Filter
+                    <span class="absolute left-0 flex items-center pl-2 rounded"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-10 h-10 p-2 rounded text-stone-600 bg-stone-100"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                        />
+                      </svg>
+                    </span>
+                    <input
+                      type="search"
+                      class="bg-stone-100 flex rounded p-2 w-full ml-10 mr-5 focus:outline-none"
+                      placeholder="Search Product name,Brand name, Model name and..."
+                    />
+                  </label>
+                </div>
               </div>
+          </div>
+
+          <!-- Crat items -->
+          <div class="flex items-center justify-center">
+              <div class="w-full md:w-3/5  md:max-w-2xl">
+                    <div class="flex items-center justify-between p-4 cursor-pointer">
+                      <span><a href="./cart.html">Cart</a></span>
+                      <span class="text-orange-600"><a href="./watch.html">Back To Home</a></span>
+                    </div>
+                    <div class="flex mb-2">
+                        <div class="bg-white p-4 flex w-full justify-between rounded-xl">
+                          <div class="flex">
+                              <div class="flex">
+                                <img src="../assets/images/apple-watch-7.png" class="w-20 h-auto" alt="">
+                                </div>
+                                <div class="flex flex-col px-4 justify-between font-bold">
+                                  <span>Apple Smart Watch</span>
+                                  <span class="text-orange-600 text-lg">£ 280.00</span>
+                                </div>
+                        
+                          </div>
+                          <div class="flex flex-col relative">
+                            <span class="text-orange-600 absolute right-0 top-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            </span>
+                            <span class="flex items-center justify-center gap-1 font-bold absolute right-0 bottom-0">
+                              <span class="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-500 border rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                              </svg>
+                              </span>
+                              <span class="flex items-center justify-center">1</span>
+                              <span class="flex w-5 h-5 bg-gray-300 text-slate-800 border rounded-full items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                              </svg>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <div class="bg-white p-4 flex w-full justify-between rounded-xl">
+                          <div class="flex">
+                              <div class="flex">
+                                <img src="../assets/images/iphone-13-pro-max 1.png" class="w-20 h-auto" alt="">
+                                </div>
+                                <div class="flex flex-col px-4 justify-between font-bold">
+                                  <span>Apple Smart Watch</span>
+                                  <span class="text-orange-600 text-lg">£ 1250.00</span>
+                                </div>
+                        
+                          </div>
+                          <div class="flex flex-col relative">
+                            <span class="text-orange-600 absolute right-0 top-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            </span>
+                            <span class="flex items-center justify-center gap-1 font-bold absolute right-0 bottom-0">
+                              <span class="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-500 border rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                              </svg>
+                              </span>
+                              <span class="flex items-center justify-center">1</span>
+                              <span class="flex w-5 h-5 bg-gray-300 text-slate-800 border rounded-full items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                              </svg>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="flex mb-2">
+                        <div class="bg-white p-4 flex w-full justify-between rounded-xl">
+                          <div class="flex">
+                              <div class="flex">
+                                <img src="../assets/images/appleLaptop3.png" class="w-20 h-auto" alt="">
+                                </div>
+                                <div class="flex flex-col px-4 justify-between font-bold">
+                                  <span>Apple Smart Watch</span>
+                                  <span class="text-orange-600 text-lg">£ 1780.00</span>
+                                </div>
+                        
+                          </div>
+                          <div class="flex flex-col relative">
+                            <span class="text-orange-600 absolute right-0 top-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            </span>
+                            <span class="flex items-center justify-center gap-1 font-bold absolute right-0 bottom-0">
+                              <span class="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-500 border rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                              </svg>
+                              </span>
+                              <span class="flex items-center justify-center">1</span>
+                              <span class="flex w-5 h-5 bg-gray-300 text-slate-800 border rounded-full items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                              </svg>
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="md:hidden">
+                      <div class="flex mb-2">
+                        <div class="bg-white p-4 flex-col w-full rounded-xl">
+                                <div class="flex w-full font-bold items-center justify-between mb-4">
+                                  <span>Total Price</span>
+                                  <span class="text-orange-600 text-lg">£ 3310.00</span>
+                                </div>
+                                <span>Discount Code:</span>
+                              <input class="bg-stone-50 p-1 rounded border border-stone-200 focus:outline-none max-w-[120px]"></input>
+                        </div>
+                      </div>
+                      <button class="flex items-center justify-center w-full border rounded-xl cursor-pointer bg-orange-600 p-2 mt-12 mb-2">Buy</button>
+                      <button class="flex items-center justify-center w-full border rounded-xl border-orange-600 cursor-pointer text-orange-600 p-2 ">Cancle</button>
+                    </div>
+              </div>
+            
+              <div class="hidden md:block p-4 w-2/5 md:max-w-md">
+                  <div class="flex mb-2">
+                    <div class="bg-white p-4 md:p-2 lg:p-4 flex-col w-full rounded-xl">
+                            <div class="flex w-full font-bold items-center justify-between mb-6">
+                              <span>Total Price</span>
+                              <span class="text-orange-600 text-lg">£ 3310.00</span>
+                            </div>
+                              <div class="flex justify-between">
+                                <span>Discount Code:</span>
+                                  <div>
+                                    <input class="bg-stone-50 p-1 rounded border border-stone-200 focus:outline-none max-w-[120px] md:max-w-[80px] lg:max-w-[120px]"></input>
+                                    <button class="bg-orange-600 p-1 rounded border  ">submit</button>
+                                  </div>
+                              </div>
+                          <div class="flex w-full font-bold items-center justify-between mb-10 mt-6">
+                            <span>Discount</span>
+                            <span class=" text-lg">£ 331.00</span>
+                          </div>
+                          <div class="flex w-full font-bold items-center justify-between mb-4 ">
+                            <span>Final Price</span>
+                            <span class="text-orange-600 text-lg">£ 2979.00</span>
+                          </div>
     
-              <!--  ACC Brand -->
-              <div x-data="{isOpenBrand: true}">
-                <div
-                  @click="isOpenBrand = !isOpenBrand"
-                  class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
-                >
-                  <label class="flex gap-1 font-bold cursor-pointer">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-                      /></svg
-                    >Brand</label
-                  ><svg
-                    :class="isOpenBrand ? 'rotate-180' : '' "
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 ml-1 transition-all duration-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
+                    </div>
                 </div>
-                <div
-                  x-show="isOpenBrand === true"
-                  class="flex flex-col px-1 bg-stone-50 rounded-xl"
-                >
-                  <label
-                    for="Apple"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="brand"
-                      id="Apple"
-                    /><span>Apple</span></label
-                  >
-                  <label
-                    for="Samsung"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="brand"
-                      id="Samsung"
-                    /><span>Samsung</span></label
-                  >
-                  <label
-                    for="Xiaomi"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="brand"
-                      id="Xiaomi"
-                    /><span>Xiaomi</span></label
-                  >
-                  <label
-                    for="Huawei"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="brand"
-                      id="Huawei"
-                    /><span>Huawei</span></label
-                  >
-                </div>
+                <button class="flex items-center justify-center w-full border rounded-xl cursor-pointer bg-orange-600 text-stone-100 p-2 mt-8 mb-1">Buy</button>
+                <button class="flex items-center justify-center w-full border rounded-xl border-orange-600 cursor-pointer text-orange-600 p-2 ">Cancle</button>
               </div>
-              <!-- ACC product color -->
-              <div x-data="{isOpenProductColor: false}">
-                <div
-                  @click="isOpenProductColor = !isOpenProductColor"
-                  class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
-                >
-                  <label class="flex gap-1 font-bold cursor-pointer">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                      /></svg
-                    >Product color</label
-                  ><svg
-                    :class="isOpenProductColor ? 'rotate-180' : '' "
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 ml-1 transition-all duration-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-                <div
-                  x-show="isOpenProductColor === true"
-                  class="flex flex-col px-1 bg-stone-50 rounded-xl"
-                >
-                  <label
-                    for="Blue"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="ProductColor"
-                      id="Blue"
-                    /><span>Blue</span></label
-                  >
-                  <label
-                    for="Red"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="ProductColor"
-                      id="Red"
-                    /><span>Red</span></label
-                  >
-                  <label
-                    for="yellow"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="ProductColor"
-                      id="yellow"
-                    /><span>yellow</span></label
-                  >
-                  <label
-                    for="Purple"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="ProductColor"
-                      id="Purple"
-                    /><span>Purple</span></label
-                  >
-                </div>
-              </div>
-              <!-- ACC Price Range -->
-              <div x-data="{isOpenPriceRange: false}">
-                <div
-                  @click="isOpenPriceRange = !isOpenPriceRange"
-                  class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
-                >
-                  <label class="flex gap-1 font-bold cursor-pointer">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                      /></svg
-                    >Price Range</label
-                  ><svg
-                    :class="isOpenPriceRange ? 'rotate-180' : '' "
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 ml-1 transition-all duration-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-                <div
-                  x-show="isOpenPriceRange === true"
-                  class="flex flex-col px-1 bg-stone-50 rounded-xl"
-                >
-                  <label
-                    for="0-200"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="PriceRange"
-                      id="0-200"
-                    /><span>0-200</span></label
-                  >
-                  <label
-                    for="200-500"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="PriceRange"
-                      id="200-500"
-                    /><span>200-500</span></label
-                  >
-                  <label
-                    for="500-1000"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="PriceRange"
-                      id="500-1000"
-                    /><span>500-1000</span></label
-                  >
-                  <label
-                    for="1000+"
-                    class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
-                    ><input
-                      class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
-                      type="checkbox"
-                      name="PriceRange"
-                      id="1000+"
-                    /><span>1000+</span></label
-                  >
-                </div>
-              </div>
-            </div>
+          
           </div>
-
-        </div>
     
 
-    <!-- Crat items -->
-    <div class="md:hidden">
-        <div class="flex mb-2">
-            <div class="bg-white p-4 flex w-full justify-between rounded-xl">
-              <div class="flex">
-                  <div class="flex">
-                    <img src="../assets/images/apple-watch-7.png" class="w-20 h-auto" alt="">
-                    </div>
-                    <div class="flex flex-col px-4 gap-8 font-bold">
-                      <span>Apple Smart Watch</span>
-                      <span class="text-orange-600 text-lg">£ 280</span>
-                    </div>
-            
-              </div>
-              <div class="flex flex-col relative">
-                <span class="text-orange-600 absolute right-0 top-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                </span>
-                <span class="flex items-center justify-center gap-1 font-bold absolute right-0 bottom-0">
-                  <span class="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-500 border rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                  </svg>
-                  </span>
-                  <span class="flex items-center justify-center">1</span>
-                  <span class="flex w-5 h-5 bg-gray-300 text-slate-800 border rounded-full items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                  </svg>
-                  </span>
-                </span>
-              </div>
-            </div>
-        </div>
-        <div class="flex mb-2">
-            <div class="bg-white p-4 flex w-full justify-between rounded-xl">
-              <div class="flex">
-                  <div class="flex">
-                    <img src="../assets/images/apple-watch-7.png" class="w-20 h-auto" alt="">
-                    </div>
-                    <div class="flex flex-col px-4 gap-8 font-bold">
-                      <span>Apple Smart Watch</span>
-                      <span class="text-orange-600 text-lg">£ 280</span>
-                    </div>
-            
-              </div>
-              <div class="flex flex-col relative">
-                <span class="text-orange-600 absolute right-0 top-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                </span>
-                <span class="flex items-center justify-center gap-1 font-bold absolute right-0 bottom-0">
-                  <span class="flex items-center justify-center w-5 h-5 bg-orange-100 text-orange-500 border rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                  </svg>
-                  </span>
-                  <span class="flex items-center justify-center">1</span>
-                  <span class="flex w-5 h-5 bg-gray-300 text-slate-800 border rounded-full items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                  </svg>
-                  </span>
-                </span>
-              </div>
-            </div>
-        </div>
-        
-        <div class="flex mb-2">
-            <div class="bg-white p-4 flex-col w-full rounded-xl">
-                    <div class="flex w-full font-bold items-center justify-between mb-4">
-                      <span>Total Price</span>
-                      <span class="text-orange-600 text-lg">£ 280.00</span>
-                    </div>
-                    <span>Discount Code:</span>
-                  <input class="bg-stone-50 p-1 rounded border border-stone-200 focus:outline-none max-w-[120px]"></input>
-            </div>
-        </div>
-        <button class="flex items-center justify-center w-full border rounded-xl cursor-pointer bg-orange-600 p-2 mt-12 mb-4">Buy</button>
-
-      </div>
-    <script
+      <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
