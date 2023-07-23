@@ -10,25 +10,6 @@
   </head>
   <body class="bg-stone-100 px-4 dark:bg-slate-950 dark:text-white">
     <!-- app bar -->
-    <div x-data=" { isOpen: true }" class=" text-blue-500 ">
-      <button @click="isOpen = !isOpen" class="absolute mr-4 mt-1 md:mt-5 md:mr-10 top-0 right-0 z-20 bg-slate-200 p-2 rounded-full ">
-        <span class="sun">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-        </svg>
-        </span>
-        <span class="moon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-        </svg>
-        </span>
-      </button>
-      <div x-show="isOpen" class="absolute right-0 mt-2 w-48 overflow-hidden rounded-lg border border-gray-200 bg-white dark:bg-gray-700 z-20">
-        <a href="#" data-theme="light" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Light</a>
-        <a href="#" data-theme="dark" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Dark</a>
-        <a href="#" data-theme="system" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">System</a>
-      </div>
-    </div >
     <div class="flex md:hidden items-center justify-between mt-6 mb-6">
       <div class="">
         <span>
@@ -63,12 +44,13 @@
           </svg>
         </span>
       </div>
-      <div class="text-lg font-bold text-slate-800">
+      <div class="text-lg font-bold text-slate-800 dark:text-slate-200">
         <span class="text-orange-600">Digi</span><span>Tize</span>
       </div>
-      <div
-        class="w-7 h-7 bg-white shadow-lg flex items-center justify-center rounded"
-       >
+      <div class="flex items-center justify-center">
+        <div
+        class="w-7 h-7 bg-white dark:text-slate-800 shadow-lg flex items-center justify-center rounded"
+         >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -76,7 +58,7 @@
           stroke-width="1.5"
           stroke="currentColor"
           class="w-5 h-5 stroke-blue-950"
-        >
+         >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -84,12 +66,34 @@
           />
         </svg>
       </div>
+      <div x-data=" { isOpen: false }" class=" text-blue-500 ">
+        <button @click="isOpen = !isOpen" class="flex items-center top-0 right-0 bg-slate-200 p-1 ml-1 rounded-full ">
+          <span class="sun">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+          </span>
+          <span class="moon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+          </span>
+        </button>
+        <div x-show="isOpen" class="absolute right-0 mt-2 w-48 overflow-hidden rounded-lg border border-gray-200 bg-white dark:bg-gray-700 z-20">
+          <a href="#" data-theme="light" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Light</a>
+          <a href="#" data-theme="dark" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Dark</a>
+          <a href="#" data-theme="system" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">System</a>
+        </div>
+      </div >
+
+      </div>
+      
     </div>
 
     <!-- descktop navBar -->
           <div class="flex items-center justify-center shadow-lg sticky z-10 top-0">
               <div class="hidden md:block w-full max-w-6xl ">
-                <div class="flex items-center justify-center bg-white mb-2">
+                <div class="flex items-center justify-center bg-white dark:text-slate-100 dark:bg-slate-600 mb-2">
                   <div class="flex w-full items-center justify-center">
                     <ul
                       class="flex items-center gap-3 lg:gap-8 p-5 text-sm lg:text-base xl:text-lg font-bold"
@@ -125,16 +129,36 @@
                     </span>
                     <input
                       type="search"
-                      class="bg-stone-100 flex rounded p-2 w-full ml-10 mr-5 focus:outline-none"
+                      class="bg-stone-100 flex rounded p-2 w-full ml-10 focus:outline-none"
                       placeholder="Search Product name,Brand name, Model name and..."
                     />
                   </label>
+                  <div x-data=" { isOpen: false }" class=" text-blue-500 ">
+                    <button @click="isOpen = !isOpen" class="flex items-center mb-4  md:mt-5 md:mr-4 top-0 right-0 z-20 bg-slate-200 p-2 rounded-full ">
+                      <span class="sun">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                      </svg>
+                      </span>
+                      <span class="moon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                      </svg>
+                      </span>
+                    </button>
+                    <div x-show="isOpen" class="absolute right-0 mt-2 w-48 overflow-hidden rounded-lg border border-gray-200 bg-white dark:bg-gray-700 z-20">
+                      <a href="#" data-theme="light" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Light</a>
+                      <a href="#" data-theme="dark" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">Dark</a>
+                      <a href="#" data-theme="system" class="theme-switcher block px-4 py-2 text-sm text-slate-800 hover:bg-gray-100 dark:text-white dark:hover:bg-slate-600">System</a>
+                    </div>
+                  </div >
+              
                 </div>
               </div>
           </div>
     <!-- filter & sort section -->
     <div class="flex md:hidden items-center justify-between gap-4 mb-5">
-      <div class="bg-white w-1/2 flex items-center justify-start rounded p-2">
+      <div class="bg-white dark:bg-slate-600 dark:text-slate-100 w-1/2 flex items-center justify-start rounded p-2">
         <div class="flex mr-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -147,9 +171,9 @@
             />
           </svg>
         </div>
-        <span class="text-sm text-slate-800 font-thin">Popular</span>
+        <span class="text-sm text-slate-800 dark:text-slate-100 font-thin">Popular</span>
       </div>
-      <div class="bg-white w-1/2 flex items-center justify-start rounded p-2">
+      <div class="bg-white dark:bg-slate-600 w-1/2 flex items-center justify-start rounded p-2">
         <div class="flex mr-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +190,7 @@
             />
           </svg>
         </div>
-        <span class="text-sm text-slate-800 font-thin">Filter: Apple</span>
+        <span class="text-sm text-slate-800 dark:text-slate-100 font-thin">Filter: Apple</span>
       </div>
     </div>
     <div
@@ -177,7 +201,7 @@
         class="hidden md:block col-span-4 lg:col-span-3 xl:col-span-2 row-span-2"
        >
         <div
-          class="bg-white p-4 rounded-xl grid ml-3 font- gap-3 max-h-[calc(100vh_-_90px)] overflow-auto sticky top-20"
+          class="bg-white dark:bg-slate-600 dark:text-slate-100 p-4 rounded-xl grid ml-3 font- gap-3 max-h-[calc(100vh_-_90px)] overflow-auto sticky top-20"
         >
           <div class="mt-4 text-orange-600 font-bold text-xl">Group</div>
           <li class="flex">
@@ -242,7 +266,7 @@
           <div x-data="{isOpenBrand: true}">
             <div
               @click="isOpenBrand = !isOpenBrand"
-              class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
+              class="flex items-center justify-between hover:bg-slate-300 dark:hover:text-orange-400 py-2 rounded-xl"
             >
               <label class="flex gap-1 font-bold cursor-pointer">
                 <svg
@@ -277,7 +301,7 @@
             </div>
             <div
               x-show="isOpenBrand === true"
-              class="flex flex-col px-1 bg-stone-50 rounded-xl"
+              class="flex flex-col px-1 bg-stone-50 dark:bg-slate-400 dark:text-stone-100 rounded-xl"
             >
               <label
                 for="Apple"
@@ -325,7 +349,7 @@
           <div x-data="{isOpenProductColor: false}">
             <div
               @click="isOpenProductColor = !isOpenProductColor"
-              class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
+              class="flex items-center justify-between hover:bg-stone-100 dark:hover:text-orange-400  py-2 rounded-xl"
             >
               <label class="flex gap-1 font-bold cursor-pointer">
                 <svg
@@ -360,11 +384,11 @@
             </div>
             <div
               x-show="isOpenProductColor === true"
-              class="flex flex-col px-1 bg-stone-50 rounded-xl"
+              class="flex flex-col px-1 bg-stone-50 dark:bg-slate-400 dark:text-stone-100 rounded-xl"
             >
               <label
                 for="Blue"
-                class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
+                class="cursor-pointer hover:bg-slate-300 py-1.5 rounded"
                 ><input
                   class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
                   type="checkbox"
@@ -374,7 +398,7 @@
               >
               <label
                 for="Red"
-                class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
+                class="cursor-pointer hover:bg-slate-300 py-1.5 rounded"
                 ><input
                   class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
                   type="checkbox"
@@ -384,7 +408,7 @@
               >
               <label
                 for="yellow"
-                class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
+                class="cursor-pointer hover:bg-slate-300 py-1.5 rounded"
                 ><input
                   class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
                   type="checkbox"
@@ -394,7 +418,7 @@
               >
               <label
                 for="Purple"
-                class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
+                class="cursor-pointer hover:bg-slate-300 py-1.5 rounded"
                 ><input
                   class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
                   type="checkbox"
@@ -408,7 +432,7 @@
           <div x-data="{isOpenPriceRange: false}">
             <div
               @click="isOpenPriceRange = !isOpenPriceRange"
-              class="flex items-center justify-between hover:bg-stone-100 py-2 rounded-xl"
+              class="flex items-center justify-between hover:bg-slate-300 dark:hover:text-orange-400  py-2 rounded-xl"
             >
               <label class="flex gap-1 font-bold cursor-pointer">
                 <svg
@@ -443,11 +467,11 @@
             </div>
             <div
               x-show="isOpenPriceRange === true"
-              class="flex flex-col px-1 bg-stone-50 rounded-xl"
+              class="flex flex-col px-1 bg-stone-50 dark:bg-slate-400 dark:text-stone-100 rounded-xl"
             >
               <label
                 for="0-200"
-                class="cursor-pointer hover:bg-stone-200 py-1.5 rounded"
+                class="cursor-pointer hover:bg-stone-300 py-1.5 rounded"
                 ><input
                   class="mr-1 form-checkbox rounded text-orange-500 focus:ring-orange-500"
                   type="checkbox"
@@ -497,7 +521,7 @@
        >
         <div
           x-data="{sort : 1, activeClass: 'text-slate-800 font-bold'}"
-          class="bg-white p-x-4 flex items-center gap-x-6 text-gray-400 rounded-lg"
+          class="bg-white dark:bg-slate-600 dark:text-slate-200 p-x-4 flex items-center gap-x-6 text-gray-400 rounded-lg"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -576,8 +600,8 @@
         >
           <!-- single product -->
           <template x-for="product in products" :key="product.id">
-            <div class="bg-white rounded-xl shadow-lg p-3 text-sm">
-              <div class="mb-3 flex items-center justify-center bg-gray-100 rounded-xl p-6 relative">
+            <div class="bg-white dark:bg-slate-600 rounded-xl shadow-lg p-3 text-sm">
+              <div class="mb-3 flex items-center justify-center bg-gray-100 dark:bg-slate-400 rounded-xl p-6 relative">
                 <img alt="product" src="../assets/images/apple-watch-7.png" srcset="" />
                 <div class="flex w-7 h-7 m-2 rounded-full absolute top-0 left-0 bg-stone-300 items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0" stroke="currentColor" class="w-4 h-4 fill-orange-600">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
